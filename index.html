@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<link rel="stylesheet" src="/style.css">
-<script src="/script.js"></script>
-<head>
-    <title>cool stuff</title>
-</head>
-<body>
-    <a href="/chat.html">Wishcord</a>
-</body>
+<html>
+  <head>
+    <title>A Multiplayer Game</title>
+    <style>
+      canvas {
+        width: 95%;
+        height: 95%;
+        border: 5px solid black;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <center>
+    <canvas id="canvas"></canvas>
+    </center>
+  </body>
+  <script src="/static/game.js"></script>
+</html>
