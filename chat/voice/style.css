@@ -4,12 +4,12 @@
 }
 
 .material-icons.blue100 {
-	color:#2196f3;
+	color:#000000;
 }
 
 .input-field input[type=text]:focus {
-     border-bottom: 1px solid #2196f3;
-     box-shadow: 0 1px 0 0 #2196f3;
+     border-bottom: 1px solid #000000;
+     box-shadow: 0 1px 0 0 #000000;
 }
 .display {
 	background-color: gray;
