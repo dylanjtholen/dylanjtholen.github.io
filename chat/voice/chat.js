@@ -1,5 +1,12 @@
 var video_out = document.getElementById("vid-box");
 
+function a() {
+    return login(this);
+}
+function s(){
+    return makeCall(this);
+}
+
 function login(form) {
 	var phone = window.phone = PHONE({
 	    number        : form.username.value || "Anonymous", // listen on username line else Anonymous
