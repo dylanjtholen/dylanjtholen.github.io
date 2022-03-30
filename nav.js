@@ -1,3 +1,3 @@
 $.get("nav.html", function(data){
-    $("header ").replaceWith(data);
+    $("header").replaceWith(data);
 });
