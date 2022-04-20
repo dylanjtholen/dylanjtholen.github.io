@@ -5,4 +5,4 @@ lol
 
 [google](https://google.com)
 
-[a](https://zombsroyale.app.link/dyGIWXKKnpb)
+[a](https://heeheehehaw.github.io/chat/a.html)
