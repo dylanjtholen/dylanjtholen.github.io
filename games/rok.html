@@ -9,10 +9,10 @@
 let started = new Date()
 let power = 0
 let specialtext = ''
-function add() {
+add = function() {
 power++
 document.getElementById('power').innerHTML = 'you have ' + power + ' power'
-if (power >= 10000) {
+if (power >= 30000000) {
     //i flipping hate dealing with time
     let units = 'seconds'
     let time = (new Date() - started) / 1000
@@ -40,6 +40,7 @@ if (power >= 10000) {
         }
     }
     document.getElementById('win').innerHTML = 'wowzers you won<br>holy jeez you spent ' + time + ' ' + units + ' playing my stupid game<br>' + specialtext
+    add = ''
 }
 }
 </script>
