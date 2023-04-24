@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>rise of kingdoms</h1>
+<p id="power">you have 0 power</p>
+<button onclick="add()">get power</button>
+<p id="win"></p>
+<script>
+let started = new Date()
+let power = 0
+let specialtext = ''
+function add() {
+power++
+document.getElementById('power').innerHTML = 'you have ' + power + ' power'
+if (power >= 10) {
+    //i flipping hate dealing with time
+    let units = 'seconds'
+    let time = (new Date() - started) / 1000
+    if (time >= 60) {
+        units = 'minutes'
+        time /= 60
+        if (time >= 60) {
+            units = 'hours'
+            time /= 60
+            if (time >= 24) {
+                units = 'days' //who would spend a day playing my silly game
+                specialtext = 'days? you can do better than that'
+                time /= 24
+                if (time >= 30) {
+                    units = 'months' //not sure why im stil going
+                    specialtext = 'wow that sure is a feat'
+                    time /= 30
+                    if (time >= 12) {
+                        units = 'years' //if you see this legitimately i'll give you $100
+                        specialtext = 'how did you last a year without reloading the page and still finish it'
+                        time /= 12
+                    }
+                }
+            }
+        }
+    }
+    document.getElementById('win').innerHTML = 'wowzers you won<br>holy jeez you spent ' + time + ' ' + units + ' playing my stupid game<br>' + specialtext
+}
+}
+</script>
+</body>
+</html>
