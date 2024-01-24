@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/style.css">
 <head>
-  <script src="https://code.jquery.com/jquery.min.js"></script>
-  <script src="/nav.js"></script>
-  <header></header>
-  <h1>you can find cool stuff here</h1>
+<link rel="stylesheet" href="/style.css">
+<title>cool stuff</title>
 </head>
 
 <body>
+  <script>
+    let currentpage = "homepage"
+    function switchPage(page) {
+        document.getElementById(currentpage).style.display = "none"
+        currentpage = page
+        document.getElementById(currentpage).style.display = "block"
+    }
+</script>
+<header>
+    <a href="javascript:;" onclick="switchPage('homepage')">Home</a>
+    <a href="javascript:;" onclick="switchPage('gamespage')">Games</a>
+</header>
+<div id="homepage" class="page">
+    <h1>Home</h1>
+    <h2>you can find cool stuff here</h2>
+</div>
+<div id="gamespage" style="display: none;" class="page">
+  <h1>Games</h1>
+  <div id="gamesDiv"></div>
+  <script>
+    const games = [
+      {
+        name: 'Tower defense game 1 (bad)',
+        url: './tower-defense-game/index.html'
+      },
+      {
+        name: 'Tower defense game 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+        url: './tower-defense-game-2/index.html'
+      },
+      {
+        name: 'Thing simulator',
+        url: './thing-simulator/index.html'
+      },
+      {
+        name: 'bad dash (bad)',
+        url: './bad-dash/index.html'
+      },
+      {
+        name: 'rise of kingdoms',
+        url: './games/kingdoms.html'
+      }]
+
+    let gamesDiv = document.getElementById('gamesDiv')
+    for (let i = 0; i < games.length; i++) {
+      let game = games[i]
+      gamesDiv.innerHTML += `<p><a href="javascript:;" onclick="openGame('${game.url}')">${game.name}</a></p>`
+    }
+
+    let anchor = window.location.href.split('#')[1]
+    function openGame(url) {
+    window.location = url + '#' + anchor
+    }
+  </script>
+</div>
 </body>
